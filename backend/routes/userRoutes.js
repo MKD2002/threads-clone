@@ -13,13 +13,13 @@ import protectRoute from "../middlewares/protectRoute.js";
 
 const router = express.Router();
 
-router.get("/profile/:query", getUserProfile);
-router.get("/suggested", protectRoute, getSuggestedUsers);
-router.post("/signup", signupUser);
-router.post("/login", loginUser);
-router.post("/logout", logoutUser);
-router.post("/follow/:id", protectRoute, followUnFollowUser); // Toggle state(follow/unfollow)
-router.put("/update/:id", protectRoute, updateUser);
-router.put("/freeze", protectRoute, freezeAccount);
+router.get("/api/profile/:query", getUserProfile);
+router.get("/api/suggested", protectRoute, getSuggestedUsers);
+router.post("/api/signup", signupUser);
+router.post("/api/login", loginUser);
+router.post("/api/logout", logoutUser);
+router.post("/api/follow/:id", protectRoute, followUnFollowUser); // Toggle state(follow/unfollow)
+router.put("/api/update/:id", protectRoute, updateUser);
+router.put("/api/freeze", protectRoute, freezeAccount);
 
 export default router;

@@ -12,12 +12,12 @@ import protectRoute from "../middlewares/protectRoute.js";
 
 const router = express.Router();
 
-router.get("/feed", protectRoute, getFeedPosts);
-router.get("/:id", getPost);
-router.get("/user/:username", getUserPosts);
-router.post("/create", protectRoute, createPost);
-router.delete("/:id", protectRoute, deletePost);
-router.put("/like/:id", protectRoute, likeUnlikePost);
-router.put("/reply/:id", protectRoute, replyToPost);
+router.get("/api/feed", protectRoute, getFeedPosts);
+router.get("/api/:id", getPost);
+router.get("/api/user/:username", getUserPosts);
+router.post("/api/create", protectRoute, createPost);
+router.delete("/api/:id", protectRoute, deletePost);
+router.put("/api/like/:id", protectRoute, likeUnlikePost);
+router.put("/api/reply/:id", protectRoute, replyToPost);
 
 export default router;
